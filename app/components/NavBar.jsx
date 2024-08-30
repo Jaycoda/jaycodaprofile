@@ -9,10 +9,11 @@ const NavBar = () => {
   const handleClick = () => setClick(!click);
 
   return (
-    <div className="bg-cyan-200 mb-2 h-10 flex items-center justify-between px-4 ">
-      <div className={` flex gap-2 bg-red-100  ${click ? "opacity-0" : ""}`}>
+    <div className="bg-gray-800 mb-2 h-10 flex text-white px-4 items-center justify-between sticky top-0">
+      <div className={` flex gap-2  ${click ? "opacity-0" : ""}`}>
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
+        <Link href="/setting">Setting</Link>
       </div>
       <div onClick={handleClick} className="cursor-pointer">
         {click ? <p>menuclose</p> : <p>menuopen</p>}
